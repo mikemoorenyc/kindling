@@ -1,0 +1,92 @@
+.pagination-container {
+  position: relative;
+  svg.loader {
+    display: none;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: calc(50% - 15px);
+    top: calc(50% - 15px);
+    animation: loadSpinner 1s infinite linear;
+    * {
+      fill: $border-color;
+    }
+  }
+  .load-more-link {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    position: relative;
+    padding: 25px 10px;
+    text-align: center;
+
+    > span {
+      line-height: 1em;
+      font-size: 14px;
+    }
+    > svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin: 0 auto;
+      transform: rotate(-90deg);
+      * {
+        fill: $green;
+      }
+    }
+  }
+  > a.pager {
+    width: 50%;
+    float: right;
+    line-height: 65px;
+    text-align: right;
+    padding-right: 45px;
+    color: $grey-text-med;
+    letter-spacing: .1em;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: color $ts;
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 14px;
+      top: 50%;
+      margin-top:-7px;
+      right: 28px;
+      background: url(../assets/imgs/page-arrow.png);
+      background-size: 100% 100%;
+    }
+    &.left-side {
+      float: left;
+      padding: 0 0 0 45px;
+      text-align: left;
+      &:after {
+        right: auto;
+        left: 28px;
+        transform: rotate(180deg);
+      }
+    }
+    &:hover {
+      color: $green;
+    }
+  }
+  &.loading {
+    svg.loader {
+      display: block;
+    }
+    .load-more-link {
+      visibility: hidden;
+    }
+  }
+}
+
+@keyframes loadSpinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

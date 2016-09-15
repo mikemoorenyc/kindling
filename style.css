@@ -1,0 +1,24 @@
+/*
+
+	Theme Name: GREEN OAK WORDPRESS SITE
+	Author: Mike Moore for REA
+	Website: http://realestatearts.com
+	Twitter: @realestatearts
+	Version: 1.2
+
+
+	CONTENTS
+	-------------
+	- Global resets
+	- Global typography & layout rules
+	- Page styles
+	- Post styles
+	- General bits
+
+	- Media queries
+
+*/
+
+.sticky {}          /* DO NOT EDIT THIS */
+.gallery-caption {} /* THESE ARE USELESS */
+.bypostauthor {}    /* THEY ARE ONLY TO KEEP THEME CHECK HAPPY */

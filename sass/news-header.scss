@@ -1,0 +1,153 @@
+#news-header {
+
+  padding: 0 percentage(45/1020);
+  display:flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  transition: overflow 0s;
+  z-index: 2;
+  &.drop-down-activated {
+    overflow:visible;
+  }
+  button.news-control {
+    position: absolute;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    top:calc(50% - 25px);
+    transition: visibility 0s;
+    transition-delay: $ts*2;
+    &.open.menu-open {
+      visibility: hidden;
+      transition-delay: 0s;
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: calc(50% - 10px);
+      top: calc(50% - 10px);
+      * {
+        fill: $grey-text;
+        transition: fill $ts;
+      }
+    }
+    &:hover {
+      svg {
+        * {
+          fill: $green;
+        }
+      }
+    }
+  }
+  h1 {
+    line-height: 95px;
+    padding-right: 75px;
+    //background: red;
+    white-space:nowrap;
+  }
+  .year-holder {
+  //  background:green;
+    flex: 1 auto;
+    overflow:hidden;
+
+    > .year-list {
+      white-space: nowrap;
+      letter-spacing: -4px;
+      text-align: right;
+      float:left;
+      max-width: 100%;
+      .year-item {
+        letter-spacing: normal;
+        text-align:  left;
+        display: inline-block;
+        &:first-child {
+          a {
+            width: ((175px / 2) + 22px);
+            padding-left: 22px;
+            &:before {
+              width: auto;
+              left: 11px;
+              right: 0;
+            }
+            &:after {
+              left:18px;
+            }
+            span {
+              left:22px;
+            }
+          }
+        }
+        &:last-child {
+          a {
+            width: ((175px / 2) + 22px);
+            padding-right: 22px;
+            &:before {
+              width: auto;
+              right: 11px;
+              left: 0;
+            }
+            &:after {
+              left: auto;
+              right:18px;
+            }
+            span {
+              left: auto;
+              right:22px;
+              transform: translateX(50%);
+            }
+          }
+        }
+      }
+
+      .year-item a{
+        display: block;
+        height: 95px;
+        width: 175px;
+        position: relative;
+        color:$grey-text;
+        &:hover, &.current {
+          text-decoration: none;
+          color:$green;
+        }
+        &:before {
+          display:block;
+          content:'';
+          width: 100%;
+          height: 2px;
+          background: #dee2e7;
+          position: absolute;
+          left: 0;
+          top: calc( 50% - 1px);
+        }
+        &:after {
+          display: block;
+          content: '';
+          width: 8px;
+          height: 8px;
+          background: $green;
+          border-radius: 50%;
+          position: absolute;
+          left: calc( 50% - 4px);
+          top: calc( 50% - 4px);
+        }
+        span {
+          display: block;
+          position: absolute;
+          left: 50%;
+          top:20px;
+
+          font-size: 16px;
+          transform: translateX(-50%);
+
+        }
+      }
+
+    }
+  }
+}
+#news-controls {
+  display:none;
+}

@@ -1,0 +1,36 @@
+footer#footer {
+  color:#737373;
+  padding: 25px;
+  text-align: center;
+  border: 1px solid #ccc;
+  font-size:13px;
+  letter-spacing: .1em;
+  background:$body-bg;
+  @media($dt) {
+    padding: 60px 60px 40px 60px;
+  }
+  @media(min-width: 1030px) {
+    margin-bottom: 85px;
+  }
+
+  a {
+    color:#737373;
+    &:hover {
+      color: $green;
+    }
+  }
+  h2 {
+
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1;
+
+    color:#bababa;
+    margin-bottom: 5px;
+  }
+  #footer-contact {
+    p {
+      margin:0;
+    }
+  }
+}

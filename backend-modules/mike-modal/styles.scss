@@ -1,0 +1,43 @@
+html.mike-modal-open {
+  overflow:hidden;
+}
+#mike-modal {
+  z-index: 159900;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(black,.9);
+  .footer {
+    text-align: right;
+  }
+  .modal {
+    left: 50%;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%,-50%);
+    padding-bottom:60px;
+    min-height: 0;
+
+  }
+  .title {
+    height: 30px;
+    font-weight: bold;
+    line-height: 30px;
+    padding: 0 15px;
+    font-size:12px;
+    background: #f3f3f3;
+    border-bottom:1px solid #ddd;
+  }
+  .content {
+    padding: 15px;
+    box-sizing: border-box;
+    overflow: auto;
+    width: 400px;
+    //height: calc(400px - (60px + 30px));
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - (20px + 30px + 60px));
+  }
+}

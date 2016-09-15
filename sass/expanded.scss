@@ -1,0 +1,15 @@
+@import 'variables.scss';
+$imgDir: '../assets/imgs';
+@import 'mixins.scss';
+
+@import 'news.scss';
+@import 'more-bug.scss';
+@import 'pagination-container.scss';
+@import 'slick.scss';
+@import "loader-bar.scss";
+@import 'about-blocks.scss';
+@import 'item-blocks.scss';
+@import 'main-header-style.scss';
+#css-checker {
+  height: 1px;
+}

@@ -1,0 +1,32 @@
+$ts: 0.25s;
+
+/*Site Directory. Probably Don't need this*/
+//Looks like url('@{siteDir}/assets/whatever.png')
+
+
+
+$imgDir: '***REPLACEWITHTHEMEDIRECTORY***/assets/imgs';
+$siteDir: '***REPLACEWITHTHEMEDIRECTORY***';
+
+
+/*BREAK POINTS*/
+$dt-break: 801px;
+$dt-max-break: ($dt-break - 1px);
+$tab: 'min-width:401px';
+$dt: 'min-width:#{$dt-break}';
+$dt-max: 'max-width:#{$dt-max-break}';
+
+/* SITE COLORS */
+$body-bg: #f6f6f6;
+$main-color: #666;
+$link-color: #bc812c;
+$link-color-hover: black;
+$green: #08a045;
+$border-color: #ccc;
+$grey-text: #c8c8c8;
+$grey-text-med: #bababa;
+/*FONTS*/
+$font-sans:  "Avenir","Helvetica", sans-serif;
+$font-serif: serif;
+$font-size-base: 14px;
+$line-height-base:  1.428571429;

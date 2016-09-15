@@ -1,0 +1,63 @@
+.more-bug {
+  display:block;
+  position: absolute;
+  font-size: 1px;
+  width: 36em;
+  height: 36em;
+  border: 1px solid $border-color;
+  border-radius: 50%;
+  transition: all $ts;
+  &:before, &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    background: $border-color;
+    transition: all $ts;
+    will-change: transform;
+  }
+  &:before {
+    top: calc(50% - .5px);
+    height: 1px;
+    width: 16em;
+    left: calc(50% - 8em);
+  }
+  &:after {
+    width: 1px;
+    left: calc(50% - .5px);
+    height: 16em;
+    top: calc(50% - 8em);
+  }
+  &.svg {
+    svg {
+      width: 20em;
+      height: 20em;
+      position: absolute;
+      left: calc(50% - 10em);
+      top: calc(50% - 10em);
+      * {
+        fill:$border-color ;
+        transition: fill $ts;
+      }
+    }
+
+    &:before, &:after {
+      display:none;
+
+    }
+  }
+}
+.cta-container:hover {
+  .more-bug {
+    border-color: $green;
+    &:before, &:after {
+      background: $green;
+      transform: rotate(90deg);
+    }
+    &.svg {
+      svg *{
+        fill: $green;
+      }
+    }
+  }
+
+}

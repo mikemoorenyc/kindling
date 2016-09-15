@@ -1,0 +1,40 @@
+.little-modal {
+  position:fixed;
+  left: 0;
+  right:0;
+  bottom: 0;
+  top: 0;
+  background:rgba(0,0,0,.7);
+  z-index:159900;
+  .inner {
+    background: white;
+    width: 500px;
+    max-width: 100%;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    box-shadow: 0 3px 6px rgba( 0, 0, 0, 0.3 )
+
+  }
+  .content {
+    padding:15px;
+    label, input, select {
+      display:block;
+      width: 100%;
+    }
+    label {
+      margin-top: 10px;
+      &:first-child {
+        margin-top:0;
+      }
+    }
+  }
+  #plugin-information-footer {
+    text-align: right;
+    position:relative;
+    button {
+      margin-left:10px;
+    }
+  }
+}
